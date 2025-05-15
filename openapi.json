@@ -1,109 +1,112 @@
-
 {
-  "openapi": "3.0.2",
+  "openapi": "3.0.0",
   "info": {
-    "title": "Market Researcher Expert Functions",
-    "description": "Orchestration of advanced functions for market intelligence with historical pattern mapping and cross-data synthesis",
-    "version": "1.0"
+    "title": "Market Research API",
+    "version": "1.0.0"
   },
   "servers": [
-    { "url": "http://localhost:5000" }
+    {
+      "url": "https://your-ngrok-url.ngrok.io"
+    }
   ],
   "paths": {
     "/extractBehavioralPatterns": {
       "post": {
-        "summary": "Ekstraksi Pola Perilaku Konsumen",
         "operationId": "extractBehavioralPatterns",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Extract Patterns",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/generateStatisticalModels": {
       "post": {
-        "summary": "Membangun Model Statistik",
         "operationId": "generateStatisticalModels",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Generate Models",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/compareMarketSegments": {
       "post": {
-        "summary": "Perbandingan Segmen Pasar",
         "operationId": "compareMarketSegments",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Compare Segments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/trackCompetitorMovements": {
       "post": {
-        "summary": "Pemantauan Pergerakan Kompetitor",
         "operationId": "trackCompetitorMovements",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Track Competitors",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/forecastMarketTrends": {
       "post": {
-        "summary": "Prediksi Tren Pasar",
         "operationId": "forecastMarketTrends",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Forecast Trends",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/synthesizeVoiceOfCustomer": {
       "post": {
-        "summary": "Sintesis Voice of Customer",
         "operationId": "synthesizeVoiceOfCustomer",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Synthesize VOC",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/runSocialListening": {
       "post": {
-        "summary": "Analisis Sosial Media dengan NLP",
         "operationId": "runSocialListening",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Social Listening",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/visualizeInsight": {
       "post": {
-        "summary": "Visualisasi Insight Bisnis",
         "operationId": "visualizeInsight",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Visualize Insight",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/generateExecutiveSummary": {
       "post": {
-        "summary": "Ringkasan Eksekutif Otomatis",
         "operationId": "generateExecutiveSummary",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
-      }
-    },
-    "/frameStrategicQuestion": {
-      "post": {
-        "summary": "Formulasi Pertanyaan Strategis",
-        "operationId": "frameStrategicQuestion",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
-      }
-    },
-    "/learnFromPastDecisions": {
-      "post": {
-        "summary": "Pembelajaran dari Studi Kasus Historis",
-        "operationId": "learnFromPastDecisions",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
-      }
-    },
-    "/mapIntuitionToAction": {
-      "post": {
-        "summary": "Rekomendasi Berdasarkan Intuisi Pakar",
-        "operationId": "mapIntuitionToAction",
-        "requestBody": { "required": true },
-        "responses": { "200": { "description": "Success" } }
+        "summary": "Executive Summary",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   }
