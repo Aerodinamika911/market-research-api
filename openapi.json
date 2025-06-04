@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "info": {
     "title": "Market Research API",
     "version": "1.0.0"
@@ -14,99 +14,84 @@
       "post": {
         "operationId": "extractBehavioralPatterns",
         "summary": "Extract Patterns",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/generateStatisticalModels": {
       "post": {
         "operationId": "generateStatisticalModels",
         "summary": "Generate Models",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/compareMarketSegments": {
       "post": {
         "operationId": "compareMarketSegments",
         "summary": "Compare Segments",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/trackCompetitorMovements": {
       "post": {
         "operationId": "trackCompetitorMovements",
         "summary": "Track Competitors",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/forecastMarketTrends": {
       "post": {
         "operationId": "forecastMarketTrends",
         "summary": "Forecast Trends",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/synthesizeVoiceOfCustomer": {
       "post": {
         "operationId": "synthesizeVoiceOfCustomer",
         "summary": "Synthesize VOC",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/runSocialListening": {
       "post": {
         "operationId": "runSocialListening",
         "summary": "Social Listening",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/visualizeInsight": {
       "post": {
         "operationId": "visualizeInsight",
         "summary": "Visualize Insight",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/generateExecutiveSummary": {
       "post": {
         "operationId": "generateExecutiveSummary",
         "summary": "Executive Summary",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/frameStrategicQuestion": {
+      "post": {
+        "operationId": "frameStrategicQuestion",
+        "summary": "Frame Strategic Question",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/learnFromPastDecisions": {
+      "post": {
+        "operationId": "learnFromPastDecisions",
+        "summary": "Learn From Past Decisions",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/mapIntuitionToAction": {
+      "post": {
+        "operationId": "mapIntuitionToAction",
+        "summary": "Map Intuition to Action",
+        "responses": { "200": { "description": "OK" } }
       }
     }
   }
