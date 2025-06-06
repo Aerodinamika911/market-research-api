@@ -1,0 +1,17 @@
+# Basic Usage
+ngrok-asgi gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
+
+# With custom host and port
+ngrok-asgi gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker \
+    --bind localhost:1234
+
+# Using webhook verifications
+ngrok-asgi gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker \
+    --webhook-verification twilio s3cr3t
+
+# Using custom sock file
+ngrok-asgi gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker \
+    --bind unix:/tmp/gunicorn.sock
+
+# Using module name
+python -m ngrok gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker --response-header X-Awesome True
