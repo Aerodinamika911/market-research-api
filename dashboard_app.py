@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
 import requests
+import os
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-API_BASE_URL = "https://your-ngrok-url.ngrok.io"  # Update this for your deployment!
+API_BASE_URL = os.environ.get('API_BASE_URL', 'http://localhost:5000')
 
 ENDPOINTS = [
     {"path": "/extractBehavioralPatterns", "label": "Extract Behavioral Patterns"},
@@ -44,4 +45,5 @@ def handle_run_api(data):
         emit('api_result', {'endpoint': endpoint, 'error': str(e), 'status_code': 500})
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=8080)
+    port = int(os.environ.get('PORT', 8080))
+    socketio.run(app, host='0.0.0.0', port=port)
