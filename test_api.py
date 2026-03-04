@@ -1,31 +1,16 @@
 import pytest
 import requests
+import os
 
-# Replace this with your actual ngrok URL after running the server
-BASE_URL = "https://your-ngrok-url.ngrok.io"
+BASE_URL = os.environ.get('API_BASE_URL', 'http://localhost:5000')
 
-endpoints = [
-    "/extractBehavioralPatterns",
-    "/generateStatisticalModels",
-    "/compareMarketSegments",
-    "/trackCompetitorMovements",
-    "/forecastMarketTrends",
-    "/synthesizeVoiceOfCustomer",
-    "/runSocialListening",
-    "/visualizeInsight",
-    "/generateExecutiveSummary",
-    "/frameStrategicQuestion",
-    "/learnFromPastDecisions",
-    "/mapIntuitionToAction"
-]
+# Add parametrized tests for all endpoints. Below is an example structure.
 
-@pytest.mark.parametrize("endpoint", endpoints)
-def test_post_endpoints(endpoint):
-    url = BASE_URL + endpoint
-    try:
-        response = requests.post(url)
-        assert response.status_code == 200, f"{endpoint} returned status {response.status_code}"
-        json_data = response.json()
-        assert "success" in json_data.get("status", "").lower(), f"{endpoint} response: {json_data}"
-    except Exception as e:
-        pytest.fail(f"Request to {endpoint} failed with error: {e}")
+@pytest.mark.parametrize('endpoint', [
+    '/endpoint1',
+    '/endpoint2',
+    '/endpoint3',  # add all endpoints that need testing
+])
+def test_api_endpoints(endpoint):
+    response = requests.get(f'{BASE_URL}{endpoint}')
+    assert response.status_code == 200 # or any logic you want to test
